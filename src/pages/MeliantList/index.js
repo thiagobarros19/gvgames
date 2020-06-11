@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import useStyles from './styles'
 
@@ -44,6 +44,11 @@ function MeliantList() {
 
   return (
     <form onSubmit={handleSubmit(handleUsers)} className={classes.container}>
+      <div className={classes.buttonContainer}>
+        <Link style={{textDecoration: 'none'}} to="/">
+          <Button className={classes.button} variant="outlined">Inicio</Button>
+        </Link>
+      </div>
       {new Array(parseInt(value)).fill(null).map((u, i) => i + 1).map((index)=>{
         return(
           <CssTextField 

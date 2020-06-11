@@ -8,7 +8,7 @@ const styles = makeStyles(theme => ({
     flexDirection: 'column',
     padding: 50,
     width: '70%',
-    height: '80%',
+    height: '100%',
   },
   input: {
     width: 350,
